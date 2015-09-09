@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <title>Hely Rego | Designer</title>
+    <script>
+    var scrollMsg = " Hover over the images for a description... ";
+    scrollMsg += " Make sure pop-ups are enabled to get the description... "
+    scrollMsg += " Click on the images for a closer view... "
+   
+    
+    var beginPos = 0;
+    function scrollingMsg(){
+    document.msgForm.scrollingMsgBox.value = 
+    scrollMsg.substring(beginPos,scrollMsg.length)+scrollMsg.substring(0, beginPos);
+    beginPos = beginPos + 1;
+    if(beginPos > scrollMsg.length){
+      beginPos = 0
+    }
+    window.setTimeout("scrollingMsg()",90)
+    }
+      
+    function Photo1Info(){
+     alert("Museum in Hiroshima."); 
+    }
+     function Photo2Info(){
+     alert("Museum in Tokyo."); 
+    }
+      function Photo3Info(){
+     alert("Temple near Asakusa."); 
+    }
+       function Photo4Info(){
+     alert("Boat ride in Tokyo."); 
+    }
+       function Photo5Info(){
+     alert("Ramen noodles."); 
+    }
+       function Photo6Info(){
+     alert("Boat ride in Hakone."); 
+    }
+    </script>
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/responsive.css">
+     <meta name="viewport" content="width=device-width, intial-scale = 1.0">
+   </head>
+   <body onload="scrollingMsg()">
+   <header>
+      <a href="index.html" id="logo">
+        <h1>Hely Rego</h1>
+        <h2>Designer</h2>
+     </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="portfolio2.html" class="selected">Portfolio 2</a></li>
+        <li><a href="portfolio3.html">Portfolio 3</a></li>
+        <li><a href="portfolio4.html">Portfolio 4</a></li>
+      </ul>
+    </nav>
+   </header>
+   <div id="wrapper">
+     <section>
+       <form name ="msgForm">
+       <input type = "text" name = "scrollingMsgBox" size ="100">
+       </form>
+       <ul id="gallery">
+        <li>
+          <a href="img/IMG_6963.JPG" target="_blank">
+          <img src="img/IMG_6963.JPG" alt="Museum in Hiroshima" height="200" width="650" 
+            onmouseover="Photo1Info()">
+          </a>
+        </li>
+        <li>
+          <a href="img/IMG_7152.JPG" target="_blank">
+          <img src="img/IMG_7152.JPG" alt="Museum in Tokyo" height="200" width="650" 
+            onmouseover="Photo2Info()">
+          </a>
+        </li>
+        <li>
+          <a href="img/IMG_3801.JPG" target="_blank">
+          <img src="img/IMG_3801.JPG" alt="Temple near Asakusa" height="200" width="650"
+            onmouseover="Photo3Info()">
+          </a>
+        </li>
+        <li>
+          <a href="img/IMG_4212.JPG" target="_blank">
+          <img src="img/IMG_4212.JPG" alt="Boat ride in Tokyo" height="200" width="650"
+            onmouseover="Photo4Info()">
+          </a>
+        </li>
+        <li>
+          <a href="img/IMG_4349.JPG" target="_blank">
+          <img src="img/IMG_4349.JPG" alt="Ramen noodles" height="200" width="650"
+            onmouseover="Photo5Info()">
+          </a>
+        </li>
+        <li>
+          <a href="img/IMG_4508.JPG" target="_blank">
+          <img src="img/IMG_4508.JPG" alt="Boat ride in Hakone" height="200" width="650"
+            onmouseover="Photo6Info()">
+          </a>
+        </li>
+      </ul> 
+     </section>
+     <footer>
+      <p>&copy; 2015 Hely Rego.</p>
+     </footer>
+   </div>
+  </body>
+</html>

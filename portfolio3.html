@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <title>Hely Rego | Designer</title>
+    <script>
+    
+     var tripPhotos = new Array();
+     tripPhotos[0] = new Image();
+     tripPhotos[0].src = "img/IMG_5016.JPG";
+     tripPhotos[1] = new Image();
+     tripPhotos[1].src = "img/IMG_5129.JPG";
+     tripPhotos[2] = new Image();
+     tripPhotos[2].src = "img/IMG_4589.JPG";
+     tripPhotos[3] = new Image();
+     tripPhotos[3].src = "img/IMG_6550.JPG";
+     tripPhotos[4] = new Image();
+     tripPhotos[4].src = "img/IMG_4999.JPG";
+     tripPhotos[5] = new Image();
+     tripPhotos[5].src = "img/IMG_6544.JPG";
+    
+    var i = 0;
+    function rotator() {
+     document.getElementById("image1").src = tripPhotos[i].src; 
+      i++;
+      if(i == tripPhotos.length){
+       i = 0; 
+      }
+      setTimeout(function() { rotator(); }, 2000);
+    }
+    
+    </script>
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/responsive.css">
+     <meta name="viewport" content="width=device-width, intial-scale = 1.0">
+   </head>
+   <body onload="rotator('image1',tripPhotos);">
+   <header>
+      <a href="index.html" id="logo">
+        <h1>Hely Rego</h1>
+        <h2>Designer</h2>
+     </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="portfolio2.html">Portfolio 2</a></li>
+        <li><a href="portfolio3.html" class="selected">Portfolio 3</a></li>
+        <li><a href="portfolio4.html">Portfolio 4</a></li>
+      </ul>
+    </nav>
+   </header>
+    <div id="wrapper">
+     <section>
+       <p>Some rotating pictures from Kyoto, Himeji and Osaka.</p>
+       <div id="img">
+        <img id="image1" height="300px" width="400px"/>
+       </div>
+     </section>
+     <footer>
+      <p>&copy; 2015 Hely Rego.</p>
+     </footer>  
+     </div>
+  </body>
+</html>

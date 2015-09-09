@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <title>Hely Rego | Designer</title>
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/responsive.css">
+     <meta name="viewport" content="width=device-width, intial-scale = 1.0">
+   </head>
+   <body>
+   <header>
+      <a href="index.html" id="logo">
+        <h1>Hely Rego</h1>
+        <h2>Designer</h2>
+     </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="portfolio2.html">Portfolio 2</a></li>
+        <li><a href="portfolio3.html">Portfolio 3</a></li>
+        <li><a href="portfolio4.html" class="selected">Portfolio 4</a></li>
+      </ul>
+    </nav>
+   </header>
+     
+    <div id="wrapper">
+     
+      <section>
+        
+       <p style="font-family:coyrier; font-size:300%; color:black">Examples that use JavaScript code</p>
+<hr>
+<p id="demo">Click on the button to make the text green.</p>
+       <button type="button" onclick="myFunction()">Click Here!</button>
+       <script>
+function myFunction() {
+    var x = document.getElementById("demo");           
+    x.style.color = "green"; 
+}
+      
+        
+</script>
+    
+        <p style="font-family:coyrier; font-size:200%; color:black">The current time is displayed below</p>
+        <p id="time"></p>
+        <script>
+document.getElementById("time").innerHTML = Date();
+</script>
+        
+       <p style="font-family:coyrier; font-size:200%; color:black" >An Example of Input Validation</p>
+
+<p>Please input a number between 1 and 100:</p>
+
+<input id="numb" type="number">
+
+<button type="button" onclick="secondFunction()">Submit</button>
+
+<p id="test"></p>
+
+<script>
+function secondFunction() {
+    var x, text;
+
+    
+    x = document.getElementById("numb").value;
+
+   
+    if (isNaN(x) || x < 1 || x > 100) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("test").innerHTML = text;
+}
+</script>
+       
+     </section>
+     <footer>
+      <p>&copy; 2015 Hely Rego.</p>
+     </footer>  
+     </div>
+  </body>
+</html>
